@@ -20,4 +20,6 @@ const getItemsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getItemsByUid };
+const deleteItem = (itemId) => axios.delete(`${baseUrl}/items/${itemId}.json`);
+
+export default { getItemsByUid, deleteItem };
